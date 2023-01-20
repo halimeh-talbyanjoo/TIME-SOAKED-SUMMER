@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 16px;
+}
+body{
+    font-size: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+header, nav, footer, article, aside, figure, figcaption, div, span{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none;
+}
+#main{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+header{
+    width: 100%;
+    height: 700px;
+    background-image:url(img/penelope-cruz-6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+}
+header:hover{
+    background-image:url(img/penelope-cruz-5.jpg);
+
+}
+nav{
+    width: 100%;
+    object-fit: contain;
+    height: 40px;
+    margin-top: 10px;
+    position: sticky;
+    top: 0;
+    /* background-color: rgba(255, 255, 255, 0.651); */
+    /* border: 1px solid red; */
+}
+#main>header>nav>h2{
+    width:10%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    height: 100%;
+    color:rgb(255, 136, 0);
+}
+#main>header>nav>a{
+    text-transform: uppercase;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    color:orangered;
+    margin-right:50px;
+    text-align: center;
+    /* border-radius: 5px; */
+    padding-left: 30px;
+    /* background-image: linear-gradient(hwb(56 4% 2%),rgb(255, 0, 0)); */
+}
+#main>header>nav>ul{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    
+}
+#main>header>nav>ul>li{
+    display: flex;
+}
+#main>header>nav>ul>li>a{
+    /* width: 100%; */
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    color: white;
+    /* box-shadow: 0 0 10px 5px orange; */
+    text-transform: capitalize;
+    position: relative;
+    font-size: 1.50rem;
+    text-shadow:  0 0 40px 40px orange;
+}
+#main>header>nav>ul>li:nth-of-type(2){
+margin-left: 25px;
+}
+#main>header>nav>ul>li>a::after{
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 2px;
+    transition: .4s;
+}
+#main>header>nav>ul>li>a:hover::after{
+    width: 75%;
+}
+#main>header>P{
+    display: flex;
+    width: 300px;
+    height: 250px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right:50px;
+    top: 250px;
+    font-size: 1.70rem;
+    padding: 20px;
+    background-color: rgb(115, 94, 65);
+    border-radius: 2px;
+    color: white;
+    align-items: center;
+    padding-left: 50px;
+}
+#main>header>h1{
+    display: flex;
+    /* width: 400px; */
+    height: 150px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right:100px;
+    top: 380px;
+    font-size: 4rem;
+    /* padding: 20px; */
+    /* background-color: rgb(100, 102, 83); */
+    border-radius: 3px;
+    color: white;
+    align-items: center;
+    font-weight: 300px;
+    /* padding-left: 50px; */
+}
+#main>.slide_top{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 370px;
+    /* border: 1px solid red; */
+
+}
+#main>.slide_top>span{
+    display: flex;
+    width: 130px;
+    height: 130px;
+    /* border: 1px solid red; */
+    background-color: rgba(202, 179, 152, 0.603);
+    position: relative;
+    top: 70%;
+    left: 20%;
+    z-index: 1;
+}
+#main>.slide_top>figure:nth-of-type(1),#main>.slide_top>figure:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+#main>.slide_top>figure:nth-of-type(1)>img{
+    width: 50%;
+    position: relative;
+    bottom: 15%;
+    left: 13%;
+}
+#main>.slide_top>figure:nth-of-type(2)>img{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    bottom: 10%;
+    right: 10%;
+}
+.slide_top1{
+    width: 100%;
+    height: 350px;
+}
+.slide_top1>figure{
+    width:30%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center
+}
+.slide_top1>figure:nth-of-type(1)>img{
+    width: 70%;
+    height: 50%;
+}
+.slide_top1>figure:nth-of-type(2)>img{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    bottom: 20%;
+    left: 15%;
+}
+.slide_top1>section{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+
+}
+.slide_top1>section>h2{
+width: 100%;
+padding: 10px;
+font-size: 2rem;
+}
+.slide_top1>section>p{
+width: 100%;
+font-size: 1.20rem;
+padding: 15px;
+position: relative;
+bottom: 15%;
+}
+.slide_top1>section>a{
+    width: 50%;
+    padding: 15px;
+    font-size: 1.20rem;
+    color: white;
+    align-content: center;
+    background-color: black;
+    height: 50px;
+    position: relative;
+    bottom: 20%;
+}
+.slide_top2{
+    width: 100%;
+    height: 550px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.slide_top2>section{
+    width: 5%;
+    /* padding: 50px; */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    right: 11%;
+    top: 25%;
+    width: 550px;
+    height: 300px;
+    /* border: 1px solid red; */
+    color: black;
+    background-color: white;
+    z-index: 1;
+}
+.slide_top2>figure:nth-of-type(1){
+    width: 20%;
+}
+.slide_top2>figure:nth-of-type(1)>img{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 5%;
+}
+.slide_top2>figure:nth-of-type(2){
+    width: 30%;
+}
+.slide_top2>figure:nth-of-type(3){
+    width: 40%;
+}
+.slide_top2>figure:nth-of-type(3)>img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 50%;
+
+}
+
+.slide_top2>section>*{
+    width: 100%;
+}
+.slide_top2>section>h2:nth-of-type(1){
+font-size: 2rem;
+position: relative;
+top: 10%;
+}
+/* .slide_top2>section>h2:nth-of-type(2){
+position: relative;
+bottom: 10%;
+} */
+.slide_top2>section>p{
+width: 100%;
+font-size: 1.20rem;
+/* padding: 15px; */
+position: relative;
+bottom: 5%;
+}
+.slide_top2>section>a{
+    width: 50%;
+    padding: 15px;
+    font-size: 1.20rem;
+    color: white;
+    align-content: center;
+    background-color: black;
+    height: 50px;
+    position: relative;
+    bottom: 5%;
+    left: 20%;
+}
+.box-shodw{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top:  50px;
+
+}
+.box-shodw>figure{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 33.3%;
+    height: 800px;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+.box-shodw>figure>img{
+    width: 70%;
+    height: 50%;
+    /* border: 2px solid rgb(17, 0, 255); */
+    box-shadow:60px 60px rgb(228, 226, 226);
+}
+.box-shodw>figure>figcaption{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.box-shodw>figure>figcaption>h2{
+width: 80%;
+font-size: 1.50rem;
+margin: 45px;
+text-align: justify;
+text-transform: uppercase ;
+/* top: 10%; */
+}
+.box-shodw>figure>figcaption>p{
+width: 90%;
+font-size: 1.10rem;
+margin: 45px;
+text-align: justify;
+position: relative;
+bottom: 15%;
+}
+.slide_3{
+    margin-top: 50px;
+    width: 100%;
+    height: 800px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.slide_3>section{
+    width: 5%;
+    /* padding: 50px; */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    /* left: 150px; */
+    width: 600px;
+    height: 300px;
+    /* border: 1px solid red; */
+    color: black;
+    background-color: white;
+    z-index: 1;
+}
+.slide_3>figure:nth-of-type(1){
+    width: 45%;
+        /* border: 1px solid red; */
+        margin-left: 20px;
+    /* margin-right: 10px; */
+}
+.slide_3>figure:nth-of-type(1)>img{
+    width: 120%;
+    height: 100%;
+    /* display: flex; */
+margin-left: 60px;
+/* object-fit: contain; */
+position: relative;
+left: 20%;
+}
+.slide_3>figure:nth-of-type(2){
+    width: 35%;
+        /* border: 1px solid red; */
+
+}
+.slide_3>figure:nth-of-type(2)>img{
+    width: 130%;
+    height: 100%;
+    object-fit: cover;
+position: relative;
+right: 50%;
+z-index: -1;
+}
+.slide_3>figure:nth-of-type(3){
+    width: 15%;
+    /* border: 1px solid red; */
+    /* margin-left: 10px; */
+    margin-right: 20px;
+
+}
+.slide_3>figure:nth-of-type(3)>img{
+    object-fit: contain;
+    width: 80%;
+    /* height: 100%; */
+
+}
+.slide_3>section>*{
+    width: 100%;
+}
+.slide_3>section>h2:nth-of-type(1){
+font-size: 2rem;
+position: relative;
+top: 10%;
+}
+
+.slide_3>section>p{
+width: 100%;
+font-size: 1.20rem;
+/* padding: 15px; */
+position: relative;
+bottom: 5%;
+}
+.slide_3>section>a{
+    width: 65%;
+    padding: 15px;
+    font-size: 1.20rem;
+    color: white;
+    align-content: center;
+    background-color: black;
+    height: 50px;
+    position: relative;
+    text-transform: uppercase ;
+    bottom: 5%;
+    left: 20%;
+}
+.model{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+.model>*{
+    width: 100%;
+    margin-left: 10%;
+    font-size: 20px
+    
+}
+.model>h2{
+    margin-left: 10%;
+    padding: 20px;
+    text-transform: uppercase;
+}
+.slide_4{
+    width: 100%;
+        margin-top: 20px;
+}
+.slide_4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+            width: 100%;
+            /* height: 500px; */
+            margin-top: 30px;
+            /* border: 1px solid red; */
+        }
+        article{
+            display: flex;
+            position: relative;
+            width: 31%;
+            height: 400px;
+            color: #9c8d8d;
+            background-size: contain;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        article>div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-top-left-radius: 20px;
+            transform: translateY(70px);
+            transition: transform .25s;
+        }
+        article>div::before{
+            content: "";
+            position: absolute;
+            top: -47px;
+            right: -45px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-175deg);
+            border-radius:50% ;
+            box-shadow: inset 48px 48px #fff;
+        }
+        article>div>h3{
+            width: 100%;
+
+            color: #141414;
+            line-height: 15px;
+            text-transform: uppercase ;
+
+        }
+        article>div>span{
+            /* display: block; */
+            width: 100%;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        article>div>p{
+            width: 100%;
+            font-size: 15px;
+            opacity: 0;
+            transition: opasity .5s;
+        }
+        article:hover>div{
+            transform: translateY(0);
+        }
+        article:hover>div>p{
+            opacity: 1;
+            transition-delay: .25s;
+
+        }
+        .slide_4>a{
+            text-align: center;
+            width: 150px;
+            padding: 15px;
+            background-color: black;
+            /* margin: 100px auto; */
+            color: white;
+            text-transform: uppercase;
+        }
+        .gallary_all{
+            width: 100%;
+            height: 400px
+        }
+        .gallary_all>section{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .gallary_all>section>figure{
+            width:25% ;
+            background-size: cover;            
+            margin: 10px;
+        }
+        .gallary_all>section>figure>img{
+            width: 100%;
+        }
+        .gallary_all>section>figure:nth-of-type(1)>img{
+            width: 90%;
+            height: 250px;
+            margin-bottom: 0;
+            margin-top: 30px; 
+        margin-left: 50%;       }
+        .gallary_all>section>figure:nth-of-type(3)>img{
+            width: 80%;
+            height: 200px;
+            margin-top: 80px;
+            margin-right: 50%;       }
+
+        /* .gallary_all_1{
+            width: 100%;
+            margin-top: 10px;
+        }
+        .gallary_all_1>article:nth-of-type(1){
+            width: 50%;
+            height: 250px;
+            background-image: url(img/37.jpg);
+            background-size:cover;
+        }
+        .gallary_all_1>article:nth-of-type(2){
+            height: 250px;
+            width: 50%;
+            background-image: url(img/38.jpg);
+            background-size:cover;
+
+        } */
+        footer{
+            margin-top: 30px;
+            width: 100%;
+            background-image: url(img/50.jpg);
+            background-size: cover;
+            /* height: 300px; */
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            flex-wrap: wrap;
+            transition: 1s;
+        }
+        footer:hover{
+            background-image:url(img/40.png);
+
+        }
+        footer>h1{
+            width: 100%;
+            color:white;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 50px;
+            font: 2rem;
+        }
+    footer>input{
+        color: rgb(14, 14, 14);
+        font-size: 1.50rem;
+            margin-top: 250px;
+            background-color: #ffffffb6;
+            width: 30% ;
+            height: 50px;
+            margin-left: 20%;
+            outline: 2px solid rgb(255, 255, 255);
+            outline-offset: 5px;
+        }
+footer>a{
+            margin-top: 250px;
+        width: 140px;
+    padding: 15px;
+    font-size: 1.20rem;
+    color: rgb(10, 10, 10);
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    margin-left: 5%;
+}
+ .Introduction{
+     width: 100%;
+     height: 80px;
+     text-transform: uppercase;
+     display: flex;
+     flex-direction: column;
+     color: #141414;
+text-align: center; 
+font-size: 1rem;
+}
+.Introduction>*{
+    padding: 5px;
+}
+    </style>
+</head>
+<body>
+    <main id="main">
+        <header>
+            <nav>
+                <h2>MYSITE</h2>
+                <ul>
+                    <li><a href=""> HOME</a></li>
+                    <li><a href=""> ABOUT</a></li>
+                    <li><a href="">STORY</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="">HALIMEH TALBYANJOO</a></li>
+                </ul>
+                <a href="">Sing In</a>
+            </nav>
+            <P>spring collection</P>
+            <h1>TIME SOAKED  SUMMER </h1>
+        </header>
+        <div class="slide_top">
+            <span></span>
+
+            <figure>
+                <img src="img/11.jpeg" alt="">
+            </figure>
+            <figure>
+                <img src="img/14.jpeg" alt="">
+            </figure>
+        </div>
+        <div class="slide_top1"> 
+            <figure>
+                <img src="img/13.jpeg" alt="">
+            </figure>
+            <section>
+                <h2>FIND YOUR CALIFORNIA TRAVEL</h2>
+                <p>As featured on Harper's Bazaar, find you California's Nico Guilis shoots Vanessa Hudgens in Lisbon, Portugal.</p>
+                <a href="">VIEW THE STORY</a>
+            </section>
+                <figure>
+                    <img src="img/12.jpeg" alt="">
+                </figure>
+        </div>
+        <div class="slide_top2"> 
+            <figure>
+                <img src="img/16.jpeg" alt="">
+            </figure>
+            <figure>
+                <img src="img/15.jpeg" alt="">
+            </figure>
+            <section>
+                <h2>DAY DREAMER</h2>
+                <h2>ـــــــــــــــــــ</h2>
+                <p>Write a song, do a dance; there's something about that velvet dress. In the middle of nowhere you can get away with anything.</p>
+                <a href="">halimeh talbyanjoo</a>
+            </section>
+            <figure>
+                <img src="img/17.jpeg" alt="">
+            </figure>
+        </div>
+        <div class="box-shodw">
+            <figure class="gallery ">
+                <img src="img/18.jpeg" alt="">
+                <figcaption>
+                    <h2>THE FIRST INSTALLMENT OF PETRA COLLINS' DANCE </h2>
+                    <p>Phasellus scelerisque sed leo quis gravida. Fusce lobortis libero ut arcu blandit pharetra.</p>
+                </figcaption>
+                </figure>
+            <figure class="gallery ">
+                <figcaption>
+                    <h2>Quilted, pinstriped, bedazzled, or frayed </h2>
+                    <p>Donec mattis tincidunt sodales integer efficitur nulla sit amet scelerisque vestibulum.</p>
+                </figcaption>
+                <img src="img/19.jpeg" alt="">
+                
+                </figure>
+            <figure class="gallery ">
+                <img src="img/20.jpeg" alt="" style="height: 400px;">
+                <figcaption>
+                    <h2>5 Professionally Styled Outfits to Try This Spring </h2>
+                    <p>Donec mattis tincidunt sodales integer efficitur nulla sit amet scelerisque vestibulum.</p>
+                </figcaption>
+                </figure>
+        </div>
+        <div class="slide_3"> 
+            <figure>
+                <img src="img/21.jpeg" alt="">
+            </figure>
+            <section>
+                <h2>PERDRE LA FEMME</h2>
+                <h2>ـــــــــــــــــــ</h2>
+                <p>Write a song, do a dance; there's something about that velvet dress. In the middle of nowhere you can get away with anything.</p>
+                <a href="">halimeh talbyanjoo</a>
+            </section>
+            <figure>
+                <img src="img/22.jpeg" alt="">
+            </figure>
+            
+            <figure>
+                <img src="img/23.jpeg" alt="">
+            </figure>
+        </div>
+        <div class="model">
+            <h2>Fusion of variety</h2>
+            <p>Mauris risus nulla, vehicula nec diam ut, ornare ultrices nisi neque sed lacinia scelerisque.</p>
+        </div>
+        <section class="slide_4">
+            <article>
+                <img src="img/24.jpg" alt="">
+                <div>
+                    <h3>Shining of fashion beauty</h3>
+                    <span>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</span>
+                    <p>Phasellus scelerisque sed leo quis gravida. Fusce lobortis libero ut arcu blandit pharetra</p>
+                </div>
+            </article>
+            <article>
+                <img src="img/25.jpg" alt="">
+
+                <div>
+                    <h3>Bringing summer back</h3>
+                    <span>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</span>
+                    <p>Donec mattis tincidunt sodales integer efficitur nulla sit amet scelerisque vestibulum</p>
+                </div>
+            </article>
+            <article>
+                <img src="img/26.jpg" alt="">
+                <div>
+                    <h3>Shining of fashion beauty</h3>
+                    <span>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</span>
+                    <p>Donec mattis tincidunt sodales integer efficitur nulla sit amet scelerisque vestibulum.</p>
+                </div>
+            </article>
+            <a href="">more</a>
+            </section>
+            <div class="gallary_all">
+                <section>
+                    <figure>
+                        <img src="img/27.jpeg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="img/28.jpeg" alt="">
+                    </figure>
+                    <figure>
+                        <img src="img/29.jpeg" alt="">
+                    </figure>
+                </section>
+            </div>
+            <!-- <div class="gallary_all_1"> 
+                <article></article>
+                <article></article>
+
+            </div> -->
+            <footer>
+
+               <h1>Join Our Secret Society</h1>
+               <label for="text"></label>
+               <input type="text" id="text" placeholder="Enter your email">
+               <a href="">SUBBMIT</a>
+                <article></article>
+            </footer>
+            <div>
+                <article class="Introduction">
+                    <h4>Developer: halimeh talbyanjoo </h4>
+                    <h5>gmail:parasto13662013@gmail.com</h5>
+                    <h6>tel:09175419488</6>
+                    </article>
+            </div>
+>
+    </main>
+    
+</body>
+</html>
